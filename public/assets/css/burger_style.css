@@ -1,8 +1,6 @@
-body{
+body {
 	font-family: papyrus;
-	background-color: teal
-	color: white
-}
-.header{
-	background-image: url("../img/burger3.jpg");
+	background-image: url("https://images.alphacoders.com/568/568578.jpg");
+	color: #B22222;
+	font-size: 40px;
 }
