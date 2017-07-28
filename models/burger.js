@@ -29,5 +29,5 @@ var burger = {
 	}
 
 };
-//export this burger orm 
+//export this burger orm
 module.exports = burger;
