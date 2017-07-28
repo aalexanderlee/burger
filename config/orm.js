@@ -7,18 +7,18 @@ function printQuestionMarks(num) {
 
   for (var i = 0; i < num; i++) {
     arr.push("?");
-  }
+  };
   return arr.toString();
-}
+};
 
 //helper function for SQL syntax.
 function objToSql(ob) {
   var arr = [];
 
   for (var key in ob) {
-    if (Object.hasOwnProperty.call(ob, key)) {
+    //if (Object.hasOwnProperty.call(ob, key)) {
       arr.push(key + "=" + ob[key]);
-    }
+    //}
   }
   return arr.toString();
 }
@@ -26,11 +26,9 @@ function objToSql(ob) {
 //object for our SQL statement functions.
 var orm = {
   all: function(tableInput, cb) {
-    var queryString = "SELECT * FROM " + tableInput + ";";
+    var queryString = "SELECT * FROM " + tableInput;
     connection.query(queryString, function(err, result) {
-      if (err) {
-        throw err;
-      }
+      if (err) throw err;
       cb(result);
     });
   },
@@ -47,9 +45,7 @@ var orm = {
     console.log(queryString);
 
     connection.query(queryString, vals, function(err, result) {
-      if (err) {
-        throw err;
-      }
+      if (err) throw err;
       cb(result);
     });
   },
@@ -64,14 +60,11 @@ var orm = {
 
     console.log(queryString);
     connection.query(queryString, function(err, result) {
-      if (err) {
-        throw err;
-      }
-
+      if (err) throw err;
       cb(result);
     });
   }
 };
 
-// Export the orm object for the model (cat.js).
+// Export the orm object for the model (burger.js).
 module.exports = orm;

@@ -3,7 +3,7 @@
 var express = require("express");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
-var path = require("path");
+//var path = require("path");
 
 var app = express();
 
@@ -19,5 +19,5 @@ var routes = require("./controllers/burgers_controller.js");
 app.use("/", routes);
 
 //deployable via heroku
-var port = process.env.port || 8080;
+var port = process.env.PORT || 3000;
 app.listen(port);
