@@ -1,12 +1,18 @@
 //require the mysql package
 var mysql = require("mysql");
-var connection;
+var connection = mysql.createConnection({
+	port: 3000,
+	host: "localhost",
+	user: "austin",
+	password: "ucleagu8",
+	database: "burger_db"
+});
 //establish the connection to sql workbench with credentials
 if(process.env.JAWSDB_URL) {
 	connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
 	connection = mysql.createConnection({
-		root: 3000,
+		//port: 3000,
 		host: "localhost",
 		user: "austin",
 		password: "ucleagu8",
