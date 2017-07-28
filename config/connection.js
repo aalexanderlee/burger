@@ -3,7 +3,6 @@ var mysql = require("mysql");
 
 //establish the connection to sql workbench with credentials
 var connection = mysql.createConnection({
-	port: 8080,
 	host: "localhost",
 	user: "austin",
 	password: "ucleagu8",
